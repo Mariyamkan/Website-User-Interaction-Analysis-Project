@@ -1,3 +1,36 @@
+# Website User Interaction Study
+## Introduction
+
+In this project, we will analyze website page data to identify potential issues that may affect the user experience and website performance. We will consider various parameters and metrics to form an understanding of the website's current state.
+
+## Data Description
+
+The data is a table where each row represents information about a user's interaction with the website.
+
+- EventName - event name;
+- DeviceIDHash - unique user identifier;
+- EventTimestamp - event time;
+- ExpId - experiment number: 246 and 247 are control groups, and 248 is the experimental group.
+
+EventName represents the events or actions that users perform on the website or mobile application. In the context of website or application data analysis, these events have the following meanings:
+
+- MainScreenAppear - User opens the main screen.
+- PaymentScreenSuccessful - User successfully makes a payment.
+- CartScreenAppear - User views the shopping cart.
+- OffersScreenAppear - User sees offers or promotions.
+- Tutorial - User views the tutorial.
+
+## Conclusion
+
+Based on the project's objective of identifying potential website issues, we analyzed data from two control groups (ExpId 246 and 247) and excluded the experimental group (ExpId 248). The analysis aimed to determine whether any deviations or inconsistencies in user behavior could signal potential website problems.
+
+During the data analysis, we detected 413 duplicate events. This may indicate some technical issues or anomalies in the process of registering user interaction events on the website. However, despite this number of duplicates, we did not find any significant deviations in key metrics or user behavior, indicating no major problems with the website's functionality. It is recommended to further investigate the nature and causes of the duplicates in the future to ensure data correctness and reliability for future analytical tasks.
+
+One important aspect we focused on during the analysis was user conversion at different stages of the sales funnel.
+
+Approximately 80.53% of users who viewed the cart page (CartScreenAppear) successfully completed the purchase on the payment page (PaymentScreenSuccessful). This conversion rate is a key performance indicator for the website, as it allows us to assess how successfully users complete the entire purchase process after adding items to their cart. Thus, our analysis confirmed that the website has a high conversion rate at the checkout stage, which is a positive indicator of its effectiveness.
+
+
 # Исследование пользовательского взаимодействия с веб-сайтом
 ## Введение
 
@@ -17,27 +50,13 @@ EventName представляет собой события или действ
 - CartScreenAppear - Пользователь просматривает корзину с товарами.
 - OffersScreenAppear - Пользователь видит предложения или акции.
 - Tutorial - Пользователь просматривает обучающее руководство.
-## Резюмирование
-<h3> Проделанная работа </h3>
-<h4> В ходе выполнения задания были совершены следующие действия: </h4>
-    - Загрузили нужные библиотеки и данные <br>   
-    - Проверили данные на полноту, на точность данных и на дубликаты <br>
-    - Убрали дубликаты и лишние данные в виде экспериментальных логов и туториал логов <br>
-    - Отразили воронку продаж
-    
-<h4> Найденная проблема: </h4>
-Было обнаружено 413 дубликатов в данных, что означает выстроенная логика/система логирования имеет изъяны и периодически совершает лишние записи.
+  
+## Вывод
 
-<h3> Дополнительная работа </h3>
-Выстроили воронку продаж. В целом было совершено 157468 действий по сайту (убрали экспериментальные и туториал логи). Проанализированные данные воронки продаж представляют следующую картину:
+Исходя из поставленной задачи проекта, которая заключалась в выявлении потенциальных проблем на веб-сайте, мы провели анализ данных двух контрольных групп (ExpId 246 и 247) и исключили из рассмотрения экспериментальную группу (ExpId 248). Целью анализа было определить, существуют ли какие-либо отклонения или несоответствия в поведении пользователей, которые могли бы сигнализировать о возможных проблемах на сайте.
 
-- Главный экран появления (MainScreenAppear): В этом этапе присутствовало 77,991 действие.
+В процессе анализа данных было выявлено наличие 413 дубликатов. Это может свидетельствовать о некоторых технических проблемах или аномалиях в процессе регистрации событий пользовательского взаимодействия на сайте. Однако, несмотря на это количество дубликатов, мы не обнаружили существенных отклонений в ключевых метриках или поведении пользователей, что указывает на отсутствие серьезных проблем с функциональностью сайта. В дальнейшем рекомендуется более детально изучить характер и причины возникновения дубликатов, чтобы гарантировать корректность и достоверность данных для будущих аналитических задач.
 
-- Просмотр предложений (OffersScreenAppear): После главного экрана предложений, 30,254 пользователей приступили к просмотру предложений.
+Одним из важных аспектов, на который мы обратили внимание в ходе анализа, была конверсия пользователей на различных этапах воронки продаж. 
 
-- Добавление товаров в корзину (CartScreenAppear): Зафиксировано 27,389 действий по добавлению товаров в корзину.
-
-- Успешная страница оплаты (PaymentScreenSuccessful): Отмечено 22,071 успешных оплат.
-
-Примерно 80.53% пользователей, которые посмотрели страницу корзины, успешно завершили покупку. Этот показатель отражает конверсию на этом этапе воронки продаж.
-    
+Примерно 80.53% пользователей, которые просмотрели страницу корзины (CartScreenAppear), успешно завершили покупку на странице оплаты (PaymentScreenSuccessful). Этот показатель конверсии является важным показателем эффективности сайта, поскольку он позволяет нам оценить, насколько успешно пользователи проходят через весь процесс покупки после того, как добавили товары в корзину. Таким образом, наш анализ подтвердил, что веб-сайт имеет высокую конверсию на этапе завершения покупки, что является положительным показателем его эффективности.
